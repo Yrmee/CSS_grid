@@ -1,0 +1,102 @@
+body{
+    background-color: sandybrown;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: wheat;
+}
+
+.grid-container {
+    width: auto;
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 80px 400px 200px 80px;
+}
+
+.site-header {
+    background-color: seagreen;
+    grid-column: 1 / -1;
+    grid-row: 1;
+}
+
+.site-main {
+    background-color: skyblue;
+    grid-column: 1 / -1;
+    grid-row: 2;
+}
+
+.widget-area {
+    background-color: slateblue;
+    grid-column: 1 / -1;
+    grid-row: 3;
+}
+
+.site-footer {
+    background-color: tomato;
+    grid-column: 1 / -1;
+    grid-row: 4;
+}
+
+@media (min-width: 1024px) {
+    .grid-container {
+        height: 100%;
+        display: grid;
+        grid-gap: 3px;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 600px 400px 100px;
+    }
+    .site-header {
+        background-color: seagreen;
+        grid-column: 1 / -3;
+        grid-row: 1 / 4;
+    }
+    
+    .site-main {
+        background-color: skyblue;
+        grid-column: 2 / -1;
+        grid-row: 1 / 2;
+    }
+    
+    .widget-area {
+        background-color: slateblue;
+        grid-column: 2 / -1;
+        grid-row: 2 / 3;
+    }
+    
+    .site-footer {
+        background-color: tomato;
+        grid-column: 2 / -1;
+        grid-row: 3;
+    }
+}
+
+@media (min-width: 1201px) {
+    .grid-container {
+        height: 100%;
+        display: grid;
+        grid-gap: 3px;
+        grid-template-columns: 300px 2fr 1fr;
+        grid-template-rows: 600px 400px 100px;
+    }
+    .site-header {
+        background-color: seagreen;
+        grid-row: 1 / 4;
+    }
+    
+    .site-main {
+        background-color: skyblue;
+        grid-column: 2 / -2;
+        grid-row: 1 / 3;
+    }
+    
+    .widget-area {
+        background-color: slateblue;
+        grid-column: 3;
+        grid-row: 1 / 4;
+    }
+    
+    .site-footer {
+        background-color: tomato;
+        grid-column: 2 / -2;
+        grid-row: 3;
+    }
+}
